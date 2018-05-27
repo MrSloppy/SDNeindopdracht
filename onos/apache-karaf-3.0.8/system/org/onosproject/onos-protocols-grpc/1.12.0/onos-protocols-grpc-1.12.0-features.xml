@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-protocols-grpc-1.12.0">
+    <feature name="onos-protocols-grpc" version="1.12.0"
+             description="gRPC Protocol Subsystem">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-protocols-grpc-proto/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-grpc-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-grpc-ctl/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/grpc-core-repkg-1.3.0/1.12.0</bundle>
+        <bundle>wrap:mvn:io.grpc/grpc-protobuf/1.3.0$Bundle-SymbolicName=io.grpc.grpc-protobuf&amp;Bundle-Version=1.3.0</bundle>
+        <bundle>wrap:mvn:io.grpc/grpc-protobuf-lite/1.3.0$Bundle-SymbolicName=io.grpc.grpc-protobuf-lite&amp;Bundle-Version=1.3.0</bundle>
+        <bundle>wrap:mvn:io.grpc/grpc-stub/1.3.0$Bundle-SymbolicName=io.grpc.grpc-stub&amp;Bundle-Version=1.3.0</bundle>
+        <bundle>wrap:mvn:io.grpc/grpc-netty/1.3.0$Bundle-SymbolicName=io.grpc.grpc-netty&amp;Bundle-Version=1.3.0</bundle>
+        <bundle>wrap:mvn:io.grpc/grpc-auth/1.3.0$Bundle-SymbolicName=io.grpc.grpc-auth&amp;Bundle-Version=1.3.0</bundle>
+        <bundle>wrap:mvn:com.google.instrumentation/instrumentation-api/0.3.0$Bundle-SymbolicName=com.google.instrumentation.instrumentation-api&amp;Bundle-Version=0.3.0</bundle>
+        <bundle>mvn:com.google.protobuf/protobuf-java/3.0.2</bundle>
+        <bundle>mvn:io.netty/netty/3.10.5.Final</bundle>
+        <bundle>mvn:io.netty/netty-buffer/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-codec/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-codec-http/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-codec-http2/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-common/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-handler/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-transport/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-transport-native-epoll/4.1.8.Final</bundle>
+        <bundle>mvn:io.netty/netty-resolver/4.1.8.Final</bundle>
+    </feature>
+</features>

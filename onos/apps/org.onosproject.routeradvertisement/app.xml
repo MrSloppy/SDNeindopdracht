@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.routeradvertisement" origin="ONOS Community" version="1.12.0"
+        title="IPv6 RA Generator" category="Traffic Steering" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-routeradvertisement/1.12.0/xml/features"
+        features="onos-apps-routeradvertisement" apps="">
+    <description>Application for generating IPv6 RAs</description>
+    <artifact>mvn:org.onosproject/onos-apps-routeradvertisement/1.12.0</artifact>
+</app>

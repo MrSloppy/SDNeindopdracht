@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.newoptical" origin="ONOS Community" version="1.12.0"
+        title="Packet/Optical Use-Case" category="Optical" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-newoptical/1.12.0/xml/features"
+        features="onos-apps-newoptical" apps="org.onosproject.optical-model">
+    <description>Packet/Optical use-case application.</description>
+    <artifact>mvn:org.onosproject/onos-apps-newoptical/1.12.0</artifact>
+</app>

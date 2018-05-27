@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.mlb" origin="ONOS Community" version="1.12.0"
+        title="Mastership Load Balancer" category="Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-mlb/1.12.0/xml/features"
+        features="onos-apps-mlb" apps="">
+    <description>Monitors distribution of mastership of network devices between the ONOS cluster nodes and periodically re-assigns the mastership to achieve balanced distribution when necessary and possible.</description>
+    <artifact>mvn:org.onosproject/onos-apps-mlb/1.12.0</artifact>
+</app>

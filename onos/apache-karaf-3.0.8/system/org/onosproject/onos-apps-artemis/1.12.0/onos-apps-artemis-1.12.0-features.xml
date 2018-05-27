@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-artemis-1.12.0">
+    <feature name="onos-apps-artemis" version="1.12.0"
+             description="Artemis">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-artemis/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-routing-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-routing-common/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-ovsdb-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-route-service-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-ovsdb-rfc/1.12.0</bundle>
+        <bundle>wrap:mvn:com.squareup.okhttp/okhttp/2.4.0$Bundle-SymbolicName=com.squareup.okhttp.okhttp&amp;Bundle-Version=2.4.0</bundle>
+        <bundle>wrap:mvn:com.squareup.okio/okio/1.4.0$Bundle-SymbolicName=com.squareup.okio.okio&amp;Bundle-Version=1.4.0</bundle>
+        <bundle>mvn:commons-net/commons-net/3.5</bundle>
+        <bundle>wrap:mvn:io.socket/socket.io-client/0.8.3$Bundle-SymbolicName=io.socket.socket.io-client&amp;Bundle-Version=0.8.3</bundle>
+        <bundle>wrap:mvn:org.json/json/20090211$Bundle-SymbolicName=org.json.json&amp;Bundle-Version=20090211</bundle>
+        <bundle>wrap:mvn:io.socket/engine.io-client/0.8.3$Bundle-SymbolicName=io.socket.engine.io-client&amp;Bundle-Version=0.8.3</bundle>
+    </feature>
+</features>

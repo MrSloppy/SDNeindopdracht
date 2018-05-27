@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.fpm" origin="ONOS Community" version="1.12.0"
+        title="FIB Push Manager (FPM) Route Receiver" category="Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-routing-fpm/1.12.0/xml/features"
+        features="onos-apps-routing-fpm" apps="org.onosproject.route-service">
+    <description>Receives/Transmits routes from external routing daemon over FPM protocol</description>
+    <artifact>mvn:org.onosproject/onos-apps-routing-common/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-routing-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-routing-fpm-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-routing-fpm-app/1.12.0</artifact>
+</app>

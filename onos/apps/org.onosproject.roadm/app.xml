@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.roadm" origin="ONOS Community" version="1.12.0"
+        title="ROADM" category="Optical" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-roadm/1.12.0/xml/features"
+        features="onos-apps-roadm" apps="org.onosproject.optical-model">
+    <description>This application provides an interface and web GUI for monitoring and configuring power on ROADM devices.</description>
+    <artifact>mvn:org.onosproject/onos-apps-roadm/1.12.0</artifact>
+</app>

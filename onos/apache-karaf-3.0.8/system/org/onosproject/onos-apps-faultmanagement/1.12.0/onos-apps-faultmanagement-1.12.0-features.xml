@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-faultmanagement-1.12.0">
+    <feature name="onos-apps-faultmanagement" version="1.12.0"
+             description="Fault Management">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-faultmanagement-fmcli/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-faultmanagement-fmgui/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-faultmanagement-fmmgr/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-faultmanagement-fmweb/1.12.0</bundle>
+    </feature>
+</features>

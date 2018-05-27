@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-ofagent-1.12.0">
+    <feature name="onos-apps-ofagent" version="1.12.0"
+             description="OpenFlow Agent">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-ofagent/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-flow/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-openflow-api/1.12.0</bundle>
+    </feature>
+</features>

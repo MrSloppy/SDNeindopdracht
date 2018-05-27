@@ -1,3 +1,14 @@
 ## SDN EINDOPDRACHT
 Eindproject voor het vak Software Defined Infrastructures (SDN).
 Hier staan de webserver, controller configuratie en database voor het demonstreren van de gebruikers in het PoC.
+
+## ONOS starten
+werkt op Ubuntu 16.04 en hoger. Voer prerequisites uit op:
+https://wiki.onosproject.org/display/ONOS/Requirements
+In de guide staat o.a. hoe je onos als service start (niet aan te raden, crashte toen ik het uitvoerde...)
+
+Na het uitvoeren van de requirements moet je onos in de /opt folder plaatsen. Start de service met:
+/opt/onos/bin/onos-service start
+webserver is te benaderen localhost:8181/onos/ui/index.html
+
+Default inlog is 'onos', pw 'rocks'.

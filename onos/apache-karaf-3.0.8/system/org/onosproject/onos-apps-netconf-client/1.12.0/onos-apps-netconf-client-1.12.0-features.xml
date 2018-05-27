@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-netconf-client-1.12.0">
+    <feature name="onos-apps-netconf-client" version="1.12.0"
+             description="NETCONF Protocol Subsystem">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-netconf-client/1.12.0</bundle>
+    </feature>
+</features>

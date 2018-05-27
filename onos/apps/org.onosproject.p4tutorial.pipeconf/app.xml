@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.p4tutorial.pipeconf" origin="ONOS Community" version="1.12.0"
+        title="P4 Tutorial Pipeconf" category="Pipeconf" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-p4-tutorial-pipeconf/1.12.0/xml/features"
+        features="onos-apps-p4-tutorial-pipeconf" apps="org.onosproject.drivers.p4runtime">
+    <description>Provides pipeconf for the ONOS-P4 Tutorial</description>
+    <artifact>mvn:org.onosproject/onos-apps-p4-tutorial-pipeconf/1.12.0</artifact>
+</app>

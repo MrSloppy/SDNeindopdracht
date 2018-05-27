@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-pcep-1.12.0">
+    <feature name="onos-providers-pcep" version="1.12.0"
+             description="PCEP Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-providers-pcep-topology/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-pcep-tunnel/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-pcep-cli/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-pcep-server-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-pcep-pcepio/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-pcep-server-ctl/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-pcep-api/1.12.0</bundle>
+        <bundle>mvn:io.netty/netty/3.10.5.Final</bundle>
+    </feature>
+</features>

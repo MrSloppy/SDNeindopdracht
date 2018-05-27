@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.linkprops" origin="ONOS Community" version="1.12.0"
+        title="Link Properties" category="Monitoring" url="https://onosproject.org/"
+        featuresRepo="mvn:org.onosproject/onos-apps-linkprops/1.12.0/xml/features"
+        features="onos-apps-linkprops" apps="">
+    <description>Shows more link properties</description>
+    <artifact>mvn:org.onosproject/onos-apps-linkprops/1.12.0</artifact>
+</app>

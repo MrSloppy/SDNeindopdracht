@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-gluon-1.12.0">
+    <feature name="onos-apps-gluon" version="1.12.0"
+             description="Gluon Shim">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-gluon/1.12.0</bundle>
+        <bundle>mvn:org.apache.httpcomponents/httpclient-osgi/4.5.1</bundle>
+        <bundle>mvn:org.apache.httpcomponents/httpcore-osgi/4.4.4</bundle>
+        <bundle>mvn:org.apache.httpcomponents/httpasyncclient-osgi/4.1.2</bundle>
+        <bundle>wrap:mvn:org.apache.httpcomponents/httpcore-nio/4.4.4$Bundle-SymbolicName=org.apache.httpcomponents.httpcore-nio&amp;Bundle-Version=4.4.4</bundle>
+    </feature>
+</features>

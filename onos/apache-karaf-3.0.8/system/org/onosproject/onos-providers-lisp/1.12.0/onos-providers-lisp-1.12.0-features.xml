@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-lisp-1.12.0">
+    <feature name="onos-providers-lisp" version="1.12.0"
+             description="LISP Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-providers-lisp-device/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-lisp-mapping/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-lisp-message/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-lisp-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-lisp-ctl/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-lisp-msg/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-mappingmanagement-api/1.12.0</bundle>
+    </feature>
+</features>

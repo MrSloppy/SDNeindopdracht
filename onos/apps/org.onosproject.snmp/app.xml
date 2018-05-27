@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.snmp" origin="ONOS Community" version="1.12.0"
+        title="SNMP Provider" category="Provider" url="https://wiki.onosproject.org/display/ONOS/SNMP"
+        featuresRepo="mvn:org.onosproject/onos-providers-snmp/1.12.0/xml/features"
+        features="onos-providers-snmp" apps="">
+    <description>Provides means for ONOS to discover and trigger the initial handshake procedure with SNMP enabled devices from information given by network configuration.</description>
+    <artifact>mvn:org.onosproject/onos-providers-snmp-device/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-snmp-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-snmp-ctl/1.12.0</artifact>
+    <artifact>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.snmp4j/2.3.4_1</artifact>
+    <artifact>mvn:org.onosproject/mibbler-mibs-rfc/1.0-20151221.1</artifact>
+    <artifact>mvn:org.onosproject/snmp-core/1.3-20161021.1</artifact>
+    <artifact>mvn:org.onosproject/mibbler-mibs-bti7000/1.0-20151221.1</artifact>
+    <artifact>mvn:org.onosproject/mibbler-mibs-net-snmp/1.0-20151221.1</artifact>
+</app>

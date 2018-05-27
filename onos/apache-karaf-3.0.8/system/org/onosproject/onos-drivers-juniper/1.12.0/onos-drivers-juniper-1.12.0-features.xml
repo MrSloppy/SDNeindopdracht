@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-drivers-juniper-1.12.0">
+    <feature name="onos-drivers-juniper" version="1.12.0"
+             description="Juniper Drivers">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-drivers-juniper/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-drivers-utilities/1.12.0</bundle>
+    </feature>
+</features>
