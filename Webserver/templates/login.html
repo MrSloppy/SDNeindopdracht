@@ -9,10 +9,14 @@
       <h1>Please login</h1>
       <br>
       <form action="" method="post">
+        <input type="text" placeholder="companyName" name="companyName" value="{{
+          request.form.companyName }}">
         <input type="text" placeholder="Username" name="username" value="{{
-          request.form.username }}">
-         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.Username }}">
+        <input type="password" placeholder="Password" name="password" value="{{
           request.form.password }}">
+        <input type="text" placeholder="outletID" name="outletID" value="{{
+          request.form.outletID }}">
         <input class="btn btn-default" type="submit" value="Login">
       </form>
       {% if error %}
