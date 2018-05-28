@@ -1,9 +1,19 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template, redirect, url_for, request
-
+import psycopg2
 
 # create the application object
 app = Flask(__name__)
+def credentialChecker():
+    #maak connectie met de database
+    try:
+        conn = psycopg2.connect("dbname='template1' user='dbuser' password='mypass'")
+    except:
+        print("I am unable to connect to the database.")
+    cur = conn.cursor()
+    cur.execute("""doehierjezooi.nl""")
+
+#def
 
 # use decorators to link the function to a url
 @app.route('/')
@@ -20,7 +30,7 @@ def welcome():
 def login():
     error = None
     if request.method == 'POST':
-        # HIER MOET DE DATABASE LINK KOMEN
+        # Dit zijn de variabelen zoals ze uit de form komen
         print("bedrijfsnaam = "+request.form['companyName'])
         print("username = "+request.form['username'])
         print("password = "+request.form['password'])
@@ -31,14 +41,14 @@ def login():
         password = request.form['password']
         outletID = request.form['outletID']
 
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid Credentials. Please try again.'
-        else:
+        if credentialChecker is True:
+            print("Succesfully logged in")
             return redirect(url_for('home'))
+        else:
+            error = 'Invalid Credentials. Please try again.'
+
     return render_template('login.html', error=error)
 
 # start the server with the 'run()' method
 if __name__ == '__main__':
     app.run(debug=True)
-
-#homogit
