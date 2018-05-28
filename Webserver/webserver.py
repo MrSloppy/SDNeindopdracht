@@ -95,7 +95,7 @@ def login():
             if credentialChecker(password, username, conn) is True:
                 print("Succesfully logged in")
                 # Hier moet de functie komen om de flows te maken
-                return redirect(url_for('home'))
+                return redirect(url_for('welcome', username=username))
             else:
                 error = 'Invaled Credentials. Please try again.'
         except:
