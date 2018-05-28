@@ -4,7 +4,9 @@ import psycopg2
 
 # create the application object
 app = Flask(__name__)
-def credentialChecker(password, username):
+
+
+def connectDatabaseChecker():
     #maak connectie met de database
     with open("wachtwoord.txt", "r") as passwordFile:
         passwordDatabase = passwordFile.readlines()
@@ -15,11 +17,19 @@ def credentialChecker(password, username):
     try:
         conn = psycopg2.connect(conString)
         print("CONNECTION TO THE DB ESTABLISHED.")
+        return conn
     except:
         print("I am unable to connect to the database.")
+
+def credentialChecker(password, username, conn):
+
     cur = conn.cursor()
-    cur.execute("select (case when password = '{0}' AND username = '{1}' THEN 0 else 1 end) from customerinfo where username = '{1}'").format(password, username)
+    print(password, username)
+    credString=("select (case when password = '{0}' AND username = '{1}' THEN 0 else 1 end) from customerinfo where username = '{1}'").format(password, username)
+    print(credString)
+    cur.execute(credString)
     feedback = cur.fetchall()
+    print(feedback)
     if(feedback[0][0] == 0):
         return True
 
@@ -50,11 +60,15 @@ def login():
         password = request.form['password']
         outletID = request.form['outletID']
 
+        conn = connectDatabaseChecker()
+
         try:
-            if credentialChecker(password, username) is True:
+            if credentialChecker(password, username, conn) is True:
                 print("Succesfully logged in")
                 # Hier moet de functie komen om de flows te maken
                 return redirect(url_for('home'))
+            else:
+                error = 'Invaled Credentials. Please try again.'
         except:
                 error = 'Invalid Credentials. Please try again.'
 
