@@ -34,6 +34,13 @@ def credentialChecker(password, username, conn):
     if(feedback[0][0] == 0):
         return True
 
+def CustomerInfoChecker(username, conn):
+    cur = conn.cursor()
+    CustomerInfoString=("select companyname, username, fsaccess, prntacces, leminutes from customerinfo where username = '{}'").format(username)
+    cur.execute(CustomerInfoString)
+    feedback = cur.fetchall()
+    print(feedback)
+    return feedback
 
 # use decorators to link the function to a url
 @app.route('/')
