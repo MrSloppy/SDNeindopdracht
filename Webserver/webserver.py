@@ -7,7 +7,7 @@ app = Flask(__name__)
 def credentialChecker():
     #maak connectie met de database
     try:
-        conn = psycopg2.connect("dbname='template1' user='dbuser' password='mypass'")
+        conn = psycopg2.connect("dbname='sdn' user='sdn' password='Welkom01!' host='84.24.206.147:5432'")
     except:
         print("I am unable to connect to the database.")
     cur = conn.cursor()
