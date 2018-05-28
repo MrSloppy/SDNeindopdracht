@@ -42,6 +42,27 @@ def CustomerInfoChecker(username, conn):
     print(feedback)
     return feedback
 
+def RestCall(APIendPoint, Method, url, data):
+    #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
+    #parameter example:
+    #APIendpoint = /devices
+    #url = http://<ip addr>/:8081/
+    #data = post JSON data. (depends on the call you want to make, lookup swagger documentation for these values.
+    if(Method == "GET"):
+        response = request.get(url + APIendPoint)
+        if(response.status_code != 200 ):
+            raise ValueError("no valid API endpoint, returned an error.")
+        else:
+            return response
+    elif(Method == "POST"):
+        response = request.post(url, data = data)
+        if (response.status_code != 200):
+            raise ValueError("no valid POST Request, returned an error.")
+        else:
+            return response
+
+
+
 # use decorators to link the function to a url
 @app.route('/')
 def home():
@@ -87,24 +108,6 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-def RestCall(APIendPoint, Method, url, data):
-    #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
-    #parameter example:
-    #APIendpoint = /devices
-    #url = http://<ip addr>/:8081/
-    #data = post JSON data. (depends on the call you want to make, lookup swagger documentation for these values.
-    if(Method == "GET"):
-        response = request.get(url + APIendPoint)
-        if(response.status_code != 200 ):
-            raise ValueError("no valid API endpoint, returned an error.")
-        else:
-            return response
-    elif(Method == "POST"):
-        response = request.post(url, data = data)
-        if (response.status_code != 200):
-            raise ValueError("no valid POST Request, returned an error.")
-        else:
-            return response
 
 
 
