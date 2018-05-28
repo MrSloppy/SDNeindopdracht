@@ -70,7 +70,7 @@ def home():
 
 @app.route('/welcome')
 def welcome():
-
+    conn = connectDatabaseChecker()
     CustomerInfoChecker("Timo", conn)
 
     return render_template('welcome.html')  # render a template
@@ -92,7 +92,7 @@ def login():
         password = request.form['password']
         outletID = request.form['outletID']
 
-        conn = connectDatabaseChecker()
+
 
         try:
             if credentialChecker(password, username, conn) is True:
