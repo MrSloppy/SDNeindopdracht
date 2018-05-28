@@ -4,7 +4,7 @@ import psycopg2
 
 # create the application object
 app = Flask(__name__)
-def credentialChecker():
+def credentialChecker(password, username):
     #maak connectie met de database
     with open("wachtwoord.txt", "r") as passwordFile:
         passwordDatabase = passwordFile.readlines()
@@ -18,7 +18,10 @@ def credentialChecker():
     except:
         print("I am unable to connect to the database.")
     cur = conn.cursor()
-    cur.execute("select (case when password = 'Welkom01' AND username = 'Timo' THEN 0 else 1 end) from customerinfo where username = 'Timo'")
+    cur.execute("select (case when password = '{0}' AND username = '{1}' THEN 0 else 1 end) from customerinfo where username = '{1}'").format(password, username)
+    feedback = cur.fetchall()
+    if(feedback[0][0] == 0):
+        return True
 
 
 # use decorators to link the function to a url
@@ -47,12 +50,13 @@ def login():
         password = request.form['password']
         outletID = request.form['outletID']
 
-        if credentialChecker() is True:
-            print("Succesfully logged in")
-            # Hier moet de functie komen om de flows te maken
-            return redirect(url_for('home'))
-        else:
-            error = 'Invalid Credentials. Please try again.'
+        try:
+            if credentialChecker(password, username) is True:
+                print("Succesfully logged in")
+                # Hier moet de functie komen om de flows te maken
+                return redirect(url_for('home'))
+        except:
+                error = 'Invalid Credentials. Please try again.'
 
     return render_template('login.html', error=error)
 
@@ -69,4 +73,5 @@ def RestCall(APIendPoint, Method, url, data):
             return ConnectionError
 
     elif(Method == "POST"):
+        print()
 
