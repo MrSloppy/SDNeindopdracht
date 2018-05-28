@@ -8,9 +8,12 @@ def credentialChecker():
     #maak connectie met de database
     with open("wachtwoord.txt", "r") as passwordFile:
         passwordDatabase = passwordFile.readlines()
+        print(passwordDatabase[0])
+
+    conString=("dbname='sdn' user='sdn' password='{}' host='84.24.206.147' port='5432'").format(passwordDatabase[0])
 
     try:
-        conn = psycopg2.connect("dbname='sdn' user='sdn' password='%s' host='84.24.206.147' port='5432'" % passwordDatabase)
+        conn = psycopg2.connect(conString)
         print("CONNECTION TO THE DB ESTABLISHED.")
     except:
         print("I am unable to connect to the database.")
@@ -48,6 +51,7 @@ def login():
 
         if credentialChecker() is True:
             print("Succesfully logged in")
+            # Hier moet de functie komen om de flows te maken
             return redirect(url_for('home'))
         else:
             error = 'Invalid Credentials. Please try again.'
