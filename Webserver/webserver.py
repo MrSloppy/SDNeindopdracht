@@ -1,6 +1,7 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template, redirect, url_for, request
 import psycopg2
+import json
 
 # create the application object
 app = Flask(__name__)
@@ -11,7 +12,7 @@ def connectDatabaseChecker():
     with open("wachtwoord.txt", "r") as passwordFile:
         passwordDatabase = passwordFile.readlines()
         print(passwordDatabase[0])
-
+    #used to connect to databsae.
     conString=("dbname='sdn' user='sdn' password='{}' host='84.24.206.147' port='5432'").format(passwordDatabase[0])
 
     try:
@@ -81,11 +82,23 @@ if __name__ == '__main__':
 
 def RestCall(APIendPoint, Method, url, data):
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
+    #parameter example:
+    #APIendpoint = /devices
+    #url = http://<ip addr>/:8081/
+    #data = post JSON data. (depends on the call you want to make, lookup swagger documentation for these values.
     if(Method == "GET"):
         response = request.get(url + APIendPoint)
         if(response.status_code != 200 ):
-            return ConnectionError
-
+            raise ValueError("no valid API endpoint, returned an error.")
+        else:
+            return response
     elif(Method == "POST"):
-        print()
+        response = request.post(url, data = data)
+        if (response.status_code != 200):
+            raise ValueError("no valid POST Request, returned an error.")
+        else:
+            return response
+
+
+
 
