@@ -14,6 +14,7 @@ def home():
 def welcome():
     return render_template('welcome.html')  # render a template
 
+
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():
