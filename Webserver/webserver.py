@@ -6,8 +6,11 @@ import psycopg2
 app = Flask(__name__)
 def credentialChecker():
     #maak connectie met de database
+    with open("wachtwoord.txt", "r") as passwordFile:
+        passwordDatabase = passwordFile.readlines()
+
     try:
-        conn = psycopg2.connect("dbname='sdn' user='sdn' password='Welkom01!' host='84.24.206.147' port='5432'")
+        conn = psycopg2.connect("dbname='sdn' user='sdn' password='%s' host='84.24.206.147' port='5432'" % passwordDatabase)
         print("CONNECTION TO THE DB ESTABLISHED.")
     except:
         print("I am unable to connect to the database.")
