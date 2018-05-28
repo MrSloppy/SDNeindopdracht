@@ -12,3 +12,8 @@ Na het uitvoeren van de requirements moet je onos in de /opt folder plaatsen. St
 webserver is te benaderen localhost:8181/onos/ui/index.html
 
 Default inlog is 'onos', pw 'rocks'.
+
+## OpenFlow compatibility
+Open de onos cli (start onos-service). Voer de volgende commando uit:
+app activate org.onosproject.openflow
+app -a -s
