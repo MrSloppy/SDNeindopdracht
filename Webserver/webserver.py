@@ -7,11 +7,12 @@ app = Flask(__name__)
 def credentialChecker():
     #maak connectie met de database
     try:
-        conn = psycopg2.connect("dbname='sdn' user='sdn' password='Welkom01!' host='84.24.206.147:5432'")
+        conn = psycopg2.connect("dbname='sdn' user='sdn' password='Welkom01!' host='84.24.206.147' port='5432'")
+        print("CONNECTION TO THE DB ESTABLISHED.")
     except:
         print("I am unable to connect to the database.")
     cur = conn.cursor()
-    cur.execute("""doehierjezooi.nl""")
+    cur.execute("""JACOB DOE TRUCJE""")
 
 #def
 
@@ -41,7 +42,7 @@ def login():
         password = request.form['password']
         outletID = request.form['outletID']
 
-        if credentialChecker is True:
+        if credentialChecker() is True:
             print("Succesfully logged in")
             return redirect(url_for('home'))
         else:
