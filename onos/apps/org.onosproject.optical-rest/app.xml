@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.optical-rest" origin="ONOS Community" version="1.12.0"
+        title="Optical Network Model REST API" category="Optical" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-optical-rest/1.12.0/xml/features"
+        features="onos-apps-optical-rest" apps="org.onosproject.optical-model">
+    <description>This application provides REST support for optical network model.</description>
+    <artifact>mvn:org.onosproject/onos-apps-optical-rest/1.12.0</artifact>
+</app>

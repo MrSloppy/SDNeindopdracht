@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-bgp-1.12.0">
+    <feature name="onos-providers-bgp" version="1.12.0"
+             description="BGP Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-providers-bgp-cfg/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-bgp-topology/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-bgp-route/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-bgp-cli/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-bgp-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-bgp-ctl/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-bgp-bgpio/1.12.0</bundle>
+    </feature>
+</features>

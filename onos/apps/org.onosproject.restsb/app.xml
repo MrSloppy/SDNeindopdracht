@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.restsb" origin="ONOS Community" version="1.12.0"
+        title="REST Provider" category="Provider" url="https://wiki.onosproject.org/display/ONOS/REST"
+        featuresRepo="mvn:org.onosproject/onos-providers-rest/1.12.0/xml/features"
+        features="onos-providers-rest" apps="">
+    <description>Provides means for ONOS to discover the existence of a REST API enabled device or proxy for multiple devices from information given by network configuration.</description>
+    <artifact>mvn:org.onosproject/onos-providers-rest-device/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-rest-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-rest-ctl/1.12.0</artifact>
+    <artifact>mvn:org.glassfish.jersey.core/jersey-client/2.25.1</artifact>
+    <artifact>mvn:commons-io/commons-io/2.6</artifact>
+    <artifact>mvn:org.apache.httpcomponents/httpclient-osgi/4.5.1</artifact>
+    <artifact>mvn:org.apache.httpcomponents/httpcore-osgi/4.4.4</artifact>
+</app>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.drivers.juniper" origin="ONOS Community" version="1.12.0"
+        title="Juniper Drivers" category="Drivers" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-drivers-juniper/1.12.0/xml/features"
+        features="onos-drivers-juniper" apps="org.onosproject.netconf">
+    <description>Adds support for Juniper devices.</description>
+    <artifact>mvn:org.onosproject/onos-drivers-juniper/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-drivers-utilities/1.12.0</artifact>
+</app>

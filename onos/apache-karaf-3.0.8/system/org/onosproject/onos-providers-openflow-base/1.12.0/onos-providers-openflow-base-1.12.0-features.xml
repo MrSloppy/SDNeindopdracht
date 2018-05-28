@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-openflow-base-1.12.0">
+    <feature name="onos-providers-openflow-base" version="1.12.0"
+             description="OpenFlow Base Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/openflowj/3.2.0.onos</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-openflow-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-openflow-ctl/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-device/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-packet/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-flow/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-group/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-meter/1.12.0</bundle>
+    </feature>
+</features>

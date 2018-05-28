@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-influxdbmetrics-1.12.0">
+    <feature name="onos-apps-influxdbmetrics" version="1.12.0"
+             description="InfluxDB Report and Query">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-influxdbmetrics/1.12.0</bundle>
+        <bundle>wrap:mvn:com.izettle/metrics-influxdb/1.1.1$Bundle-SymbolicName=com.izettle.metrics-influxdb&amp;Bundle-Version=1.1.1</bundle>
+        <bundle>wrap:mvn:org.influxdb/influxdb-java/2.2$Bundle-SymbolicName=org.influxdb.influxdb-java&amp;Bundle-Version=2.2</bundle>
+        <bundle>mvn:commons-codec/commons-codec/1.10</bundle>
+        <bundle>wrap:mvn:com.squareup.retrofit/retrofit/1.9.0$Bundle-SymbolicName=com.squareup.retrofit.retrofit&amp;Bundle-Version=1.9.0</bundle>
+        <bundle>wrap:mvn:com.squareup.okhttp/okhttp/2.4.0$Bundle-SymbolicName=com.squareup.okhttp.okhttp&amp;Bundle-Version=2.4.0</bundle>
+        <bundle>mvn:com.google.code.gson/gson/2.7</bundle>
+        <bundle>wrap:mvn:com.squareup.okio/okio/1.4.0$Bundle-SymbolicName=com.squareup.okio.okio&amp;Bundle-Version=1.4.0</bundle>
+    </feature>
+</features>

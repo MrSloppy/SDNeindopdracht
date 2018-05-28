@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-test-flow-perf-1.12.0">
+    <feature name="onos-apps-test-flow-perf" version="1.12.0"
+             description="Flow Performance Test">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-test-flow-perf/1.12.0</bundle>
+    </feature>
+</features>

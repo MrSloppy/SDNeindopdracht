@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.openflow-base" origin="ONOS Community" version="1.12.0"
+        title="OpenFlow Base Provider" category="Provider" url="https://wiki.onosproject.org/display/ONOS/OpenFlow"
+        featuresRepo="mvn:org.onosproject/onos-providers-openflow-base/1.12.0/xml/features"
+        features="onos-providers-openflow-base" apps="org.onosproject.optical-model">
+    <description>Provides the base suite of device, flow and packet providers that rely on the OpenFlow protocol to interact with network devices.</description>
+    <artifact>mvn:org.onosproject/openflowj/3.2.0.onos</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-openflow-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-openflow-ctl/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-openflow-device/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-openflow-packet/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-openflow-flow/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-openflow-group/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-openflow-meter/1.12.0</artifact>
+</app>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.models.l3vpn" origin="ONOS Community" version="1.12.0"
+        title="L3VPN YANG Models" category="Models" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-models-l3vpn/1.12.0/xml/features"
+        features="onos-models-l3vpn" apps="org.onosproject.models.common,org.onosproject.yang">
+    <description>L3VPN YANG Models</description>
+    <artifact>mvn:org.onosproject/onos-models-l3vpn/1.12.0</artifact>
+</app>

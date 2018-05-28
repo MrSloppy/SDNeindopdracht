@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.pim" origin="ONOS Community" version="1.12.0"
+        title="Protocol Independent Multicast Emulation" category="Traffic Steering" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-pim/1.12.0/xml/features"
+        features="onos-apps-pim" apps="org.onosproject.route-service">
+    <description>Protocol independent multicast emulation.</description>
+    <artifact>mvn:org.onosproject/onos-apps-routing-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-pim/1.12.0</artifact>
+</app>

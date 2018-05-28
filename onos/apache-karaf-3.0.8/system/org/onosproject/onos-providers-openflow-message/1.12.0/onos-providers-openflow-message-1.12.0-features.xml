@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-openflow-message-1.12.0">
+    <feature name="onos-providers-openflow-message" version="1.12.0"
+             description="Control Message Stats Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-cpman-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-openflow-message/1.12.0</bundle>
+    </feature>
+</features>

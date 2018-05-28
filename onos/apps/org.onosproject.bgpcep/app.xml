@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.bgpcep" origin="ONOS Community" version="1.12.0"
+        title="BGPCEP Provider" category="Provider" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-providers-bgpcep/1.12.0/xml/features"
+        features="onos-providers-bgpcep" apps="">
+    <description>BGPCEP providers.</description>
+    <artifact>mvn:org.onosproject/onos-protocols-bgp-bgpio/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-bgp-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-bgp-ctl/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-pcep-pcepio/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-pcep-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-pcep-server-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-bgp-topology/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-bgp-cfg/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-pcep-server-ctl/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-pcep-topology/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-pcep-tunnel/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-bgpcep-flow/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-pce-app/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-pce-pceweb/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-pce-bandwidthmgmt/1.12.0</artifact>
+</app>

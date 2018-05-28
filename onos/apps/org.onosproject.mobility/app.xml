@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.mobility" origin="ONOS Community" version="1.12.0"
+        title="Host Mobility" category="Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-mobility/1.12.0/xml/features"
+        features="onos-apps-mobility" apps="">
+    <description>Host mobility application.</description>
+    <artifact>mvn:org.onosproject/onos-apps-mobility/1.12.0</artifact>
+</app>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.vtn" origin="ONOS Community" version="1.12.0"
+        title="OPNFV" category="Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-vtn/1.12.0/xml/features"
+        features="onos-apps-vtn" apps="">
+    <description>ONOS framework applications</description>
+    <artifact>mvn:org.onosproject/onos-apps-vtn-vtnrsc/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-vtn-sfcmgr/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-vtn-vtnmgr/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-vtn-vtnweb/1.12.0</artifact>
+</app>

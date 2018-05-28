@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.grpc.registry" origin="ONOS Community" version="1.12.0"
+        title="Grpc Service Registry" category="TODO" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-incubator-protobuf-registry/1.12.0/xml/features"
+        features="onos-incubator-protobuf-registry" apps="">
+    <description>Service providing connections for remote apps communicating with the ONOS core via gRPC.</description>
+    <artifact>mvn:org.onosproject/grpc-core-repkg-1.3.0/1.12.0</artifact>
+    <artifact>wrap:mvn:com.google.instrumentation/instrumentation-api/0.3.0$Bundle-SymbolicName=com.google.instrumentation.instrumentation-api&amp;Bundle-Version=0.3.0</artifact>
+</app>

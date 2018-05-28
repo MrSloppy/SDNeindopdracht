@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.evpn-route-service" origin="ONOS Community" version="1.12.0"
+        title="EVPN Routing" category="Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-evpn-route-service/1.12.0/xml/features"
+        features="onos-apps-evpn-route-service" apps="">
+    <description>EVPN Routing</description>
+    <artifact>mvn:org.onosproject/onos-apps-evpn-route-service-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-evpn-route-service-app/1.12.0</artifact>
+</app>
