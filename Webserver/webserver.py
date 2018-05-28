@@ -18,6 +18,17 @@ def welcome():
 def login():
     error = None
     if request.method == 'POST':
+        # HIER MOET DE DATABASE LINK KOMEN
+        print("bedrijfsnaam = "+request.form['companyName'])
+        print("username = "+request.form['username'])
+        print("password = "+request.form['password'])
+        print("outletID = "+request.form['outletID'])
+
+        bedrijfsNaam = request.form['companyName']
+        username = request.form['username']
+        password = request.form['password']
+        outletID = request.form['outletID']
+
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
@@ -27,4 +38,3 @@ def login():
 # start the server with the 'run()' method
 if __name__ == '__main__':
     app.run(debug=True)
-
