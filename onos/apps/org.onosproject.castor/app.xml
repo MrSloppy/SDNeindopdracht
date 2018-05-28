@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.castor" origin="ONOS Community" version="1.12.0"
+        title="Castor" category="Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-castor/1.12.0/xml/features"
+        features="onos-apps-castor" apps="org.onosproject.intentsynchronizer">
+    <description>Castor application</description>
+    <artifact>mvn:org.onosproject/onos-apps-castor/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-routing-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-routing-common/1.12.0</artifact>
+</app>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-yang-1.12.0">
+    <feature name="onos-apps-yang" version="1.12.0"
+             description="YANG Compiler and Runtime">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-yang-model/2.3.1</bundle>
+        <bundle>mvn:org.onosproject/onos-yang-compiler-api/2.3.1</bundle>
+        <bundle>mvn:org.onosproject/onos-yang-runtime/2.3.1</bundle>
+        <bundle>mvn:org.onosproject/onos-yang-serializers-json/2.3.1</bundle>
+        <bundle>mvn:org.onosproject/onos-yang-serializers-xml/2.3.1</bundle>
+        <bundle>mvn:org.onosproject/onos-yang-serializers-utils/2.3.1</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-yang/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-yang-web/1.12.0</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.dom4j/1.6.1_5</bundle>
+    </feature>
+</features>

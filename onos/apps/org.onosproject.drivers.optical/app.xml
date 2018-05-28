@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.drivers.optical" origin="ONOS Community" version="1.12.0"
+        title="Basic Optical Drivers" category="Drivers" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-drivers-optical/1.12.0/xml/features"
+        features="onos-drivers-optical" apps="org.onosproject.drivers,org.onosproject.optical-model">
+    <description>Suite of basic optical device drivers.</description>
+    <artifact>mvn:org.onosproject/onos-drivers-optical/1.12.0</artifact>
+</app>

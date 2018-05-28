@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.evpnopenflow" origin="ONOS Community" version="1.12.0"
+        title="EVPN OpenFlow" category="Traffic Steering" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-evpnopenflow/1.12.0/xml/features"
+        features="onos-apps-evpnopenflow" apps="org.onosproject.route-service,org.onosproject.evpn-route-service,org.onosproject.gluon,org.onosproject.vtn">
+    <description>Ethernet VPN (EVPN) introduces a new model for Ethernet services delivery.It enables integrated Layer 2 service over Ethernet with multihoming.</description>
+    <artifact>mvn:org.onosproject/onos-apps-evpnopenflow/1.12.0</artifact>
+</app>

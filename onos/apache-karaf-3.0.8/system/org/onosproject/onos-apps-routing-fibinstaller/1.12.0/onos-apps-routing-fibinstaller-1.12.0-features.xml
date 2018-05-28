@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-routing-fibinstaller-1.12.0">
+    <feature name="onos-apps-routing-fibinstaller" version="1.12.0"
+             description="FIB Installer">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-routing-fibinstaller/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-routing-api/1.12.0</bundle>
+    </feature>
+</features>

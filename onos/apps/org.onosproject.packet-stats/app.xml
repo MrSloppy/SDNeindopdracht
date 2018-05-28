@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.packet-stats" origin="ONOS Community" version="1.12.0"
+        title="Packet Statistics" category="Traffic Steering" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-packet-stats/1.12.0/xml/features"
+        features="onos-apps-packet-stats" apps="">
+    <description>Application to calculate the number of packets of different types</description>
+    <artifact>mvn:org.onosproject/onos-apps-packet-stats/1.12.0</artifact>
+</app>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-vtn-1.12.0">
+    <feature name="onos-apps-vtn" version="1.12.0"
+             description="OPNFV">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-vtn-vtnrsc/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-vtn-sfcmgr/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-vtn-vtnmgr/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-vtn-vtnweb/1.12.0</bundle>
+    </feature>
+</features>

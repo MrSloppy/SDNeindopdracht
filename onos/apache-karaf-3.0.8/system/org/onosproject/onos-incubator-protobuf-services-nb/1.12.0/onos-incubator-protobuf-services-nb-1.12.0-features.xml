@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-incubator-protobuf-services-nb-1.12.0">
+    <feature name="onos-incubator-protobuf-services-nb" version="1.12.0"
+             description="Grpc Northbound Service">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/grpc-core-repkg-1.3.0/1.12.0</bundle>
+        <bundle>wrap:mvn:com.google.instrumentation/instrumentation-api/0.3.0$Bundle-SymbolicName=com.google.instrumentation.instrumentation-api&amp;Bundle-Version=0.3.0</bundle>
+    </feature>
+</features>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-mappingmanagement-1.12.0">
+    <feature name="onos-apps-mappingmanagement" version="1.12.0"
+             description="Mapping Management">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-mappingmanagement-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-mappingmanagement-cli/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-mappingmanagement-mgr/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-mappingmanagement-web/1.12.0</bundle>
+    </feature>
+</features>

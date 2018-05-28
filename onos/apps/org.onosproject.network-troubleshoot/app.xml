@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.network-troubleshoot" origin="ONOS Community" version="1.12.0"
+        title="Network Troubleshooter" category="Utility" url="https://wiki.onosproject.org/display/ONOS/Network+TroubleShooting+Module"
+        featuresRepo="mvn:org.onosproject/onos-apps-network-troubleshoot/1.12.0/xml/features"
+        features="onos-apps-network-troubleshoot" apps="">
+    <description>Provides various network troubleshooting utilities.</description>
+    <artifact>mvn:org.onosproject/onos-apps-network-troubleshoot-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-network-troubleshoot-cli/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-network-troubleshoot-core/1.12.0</artifact>
+</app>

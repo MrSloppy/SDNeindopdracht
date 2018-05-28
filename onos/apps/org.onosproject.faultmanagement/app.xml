@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.faultmanagement" origin="BTI Systems" version="1.12.0"
+        title="Fault Management" category="Monitoring" url="https://wiki.onosproject.org/display/ONOS/Fault+Management"
+        featuresRepo="mvn:org.onosproject/onos-apps-faultmanagement/1.12.0/xml/features"
+        features="onos-apps-faultmanagement" apps="">
+    <description>Provides managements of alarms. Stores retrieved alarms from devices. Offers CLI, UI and REST integration to obtain and display them from ONOS.</description>
+    <artifact>mvn:org.onosproject/onos-apps-faultmanagement-fmcli/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-faultmanagement-fmgui/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-faultmanagement-fmmgr/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-faultmanagement-fmweb/1.12.0</artifact>
+</app>

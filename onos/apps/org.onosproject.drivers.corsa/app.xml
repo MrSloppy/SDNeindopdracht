@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.drivers.corsa" origin="ONOS Community" version="1.12.0"
+        title="Corsa Drivers" category="Drivers" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-drivers-corsa/1.12.0/xml/features"
+        features="onos-drivers-corsa" apps="org.onosproject.openflow">
+    <description>Adds support for Corsa devices.</description>
+    <artifact>mvn:org.onosproject/onos-drivers-corsa/1.12.0</artifact>
+</app>

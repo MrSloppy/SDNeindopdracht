@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.drivers.p4runtime" origin="ONOS Community" version="1.12.0"
+        title="P4Runtime Drivers" category="Drivers" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-drivers-p4runtime/1.12.0/xml/features"
+        features="onos-drivers-p4runtime" apps="org.onosproject.generaldeviceprovider,org.onosproject.protocols.p4runtime,org.onosproject.p4runtime,org.onosproject.drivers">
+    <description>Adds support for devices using P4 Runtime protocol.</description>
+    <artifact>mvn:org.onosproject/onos-drivers-p4runtime/1.12.0</artifact>
+</app>

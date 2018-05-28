@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.primitiveperf" origin="ONOS Community" version="1.12.0"
+        title="Primitive Performance Test" category="Test Utility" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-apps-test-primitive-perf/1.12.0/xml/features"
+        features="onos-apps-test-primitive-perf" apps="">
+    <description>Primitive performance test application.</description>
+    <artifact>mvn:org.onosproject/onos-apps-test-primitive-perf/1.12.0</artifact>
+</app>

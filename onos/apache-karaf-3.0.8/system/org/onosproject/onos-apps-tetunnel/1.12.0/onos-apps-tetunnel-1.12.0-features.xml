@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-tetunnel-1.12.0">
+    <feature name="onos-apps-tetunnel" version="1.12.0"
+             description="TE Tunnel Core">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-tetunnel-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-apps-tetunnel-app/1.12.0</bundle>
+    </feature>
+</features>

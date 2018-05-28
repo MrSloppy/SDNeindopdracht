@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-isis-1.12.0">
+    <feature name="onos-providers-isis" version="1.12.0"
+             description="ISIS Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-protocols-isis-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-isis-ctl/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-isis-isisio/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-isis-cfg/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-isis-topology/1.12.0</bundle>
+    </feature>
+</features>

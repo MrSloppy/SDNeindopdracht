@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.pcep" origin="ONOS Community" version="1.12.0"
+        title="PCEP Provider" category="Provider" url="http://onosproject.org"
+        featuresRepo="mvn:org.onosproject/onos-providers-pcep/1.12.0/xml/features"
+        features="onos-providers-pcep" apps="org.onosproject.pcep-api,org.onosproject.optical-model">
+    <description>PCEP protocol providers root.</description>
+    <artifact>mvn:org.onosproject/onos-providers-pcep-topology/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-pcep-tunnel/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-providers-pcep-cli/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-pcep-server-api/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-pcep-pcepio/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-protocols-pcep-server-ctl/1.12.0</artifact>
+    <artifact>mvn:org.onosproject/onos-apps-pcep-api/1.12.0</artifact>
+    <artifact>mvn:io.netty/netty/3.10.5.Final</artifact>
+</app>

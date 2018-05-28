@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-apps-graphitemetrics-1.12.0">
+    <feature name="onos-apps-graphitemetrics" version="1.12.0"
+             description="Graphite Report and Query">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-apps-graphitemetrics/1.12.0</bundle>
+        <bundle>mvn:info.ganglia.gmetric4j/gmetric4j/1.0.10</bundle>
+        <bundle>mvn:io.dropwizard.metrics/metrics-graphite/3.2.2</bundle>
+    </feature>
+</features>

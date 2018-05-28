@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-netconf-1.12.0">
+    <feature name="onos-providers-netconf" version="1.12.0"
+             description="NETCONF Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-providers-netconf-device/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-providers-netconf-alarm/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-netconf-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-netconf-ctl/1.12.0</bundle>
+        <bundle>mvn:org.apache.sshd/sshd-core/1.4.0</bundle>
+        <bundle>wrap:mvn:ch.ethz.ganymed/ganymed-ssh2/262$Bundle-SymbolicName=ch.ethz.ganymed.ganymed-ssh2&amp;Bundle-Version=262</bundle>
+    </feature>
+</features>

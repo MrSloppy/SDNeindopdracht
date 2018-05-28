@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.drivers.lisp" origin="ONOS Community" version="1.12.0"
+        title="Generic LISP Drivers" category="Drivers" url="https://wiki.onosproject.org/display/ONOS/LISP+as+SBI"
+        featuresRepo="mvn:org.onosproject/onos-drivers-lisp/1.12.0/xml/features"
+        features="onos-drivers-lisp" apps="org.onosproject.lisp">
+    <description>Adds support for devices using LISP.</description>
+    <artifact>mvn:org.onosproject/onos-drivers-lisp/1.12.0</artifact>
+</app>

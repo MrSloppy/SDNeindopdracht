@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app name="org.onosproject.optical-model" origin="ONOS Community" version="1.12.0"
+        title="Optical Network Model" category="Optical" url="https://wiki.onosproject.org/x/C4m"
+        featuresRepo="mvn:org.onosproject/onos-optical-model/1.12.0/xml/features"
+        features="onos-optical-model" apps="">
+    <description>ONOS optical information model.</description>
+    <artifact>mvn:org.onosproject/onos-apps-optical-model/1.12.0</artifact>
+</app>

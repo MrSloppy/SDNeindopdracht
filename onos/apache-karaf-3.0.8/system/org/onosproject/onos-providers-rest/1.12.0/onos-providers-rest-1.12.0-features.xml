@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.0"
+          name="onos-providers-rest-1.12.0">
+    <feature name="onos-providers-rest" version="1.12.0"
+             description="REST Provider">
+        <feature>onos-api</feature>
+        <bundle>mvn:org.onosproject/onos-providers-rest-device/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-rest-api/1.12.0</bundle>
+        <bundle>mvn:org.onosproject/onos-protocols-rest-ctl/1.12.0</bundle>
+        <bundle>mvn:org.glassfish.jersey.core/jersey-client/2.25.1</bundle>
+        <bundle>mvn:commons-io/commons-io/2.6</bundle>
+        <bundle>mvn:org.apache.httpcomponents/httpclient-osgi/4.5.1</bundle>
+        <bundle>mvn:org.apache.httpcomponents/httpcore-osgi/4.4.4</bundle>
+    </feature>
+</features>
