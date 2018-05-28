@@ -17,8 +17,6 @@ def credentialChecker():
     cur = conn.cursor()
     cur.execute("select (case when password = 'Welkom01' AND username = 'Timo' THEN 0 else 1 end) from customerinfo where username = 'Timo'")
 
-#def
-
 
 # use decorators to link the function to a url
 @app.route('/')
@@ -57,3 +55,14 @@ def login():
 # start the server with the 'run()' method
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+def RestCall(APIendPoint, Method, url, data):
+    #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
+    if(Method == "GET"):
+        response = request.get(url + APIendPoint)
+        if(response.status_code != 200 ):
+            return ConnectionError
+
+    elif(Method == "POST"):
+
