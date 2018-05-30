@@ -2,13 +2,29 @@
 Eindproject voor het vak Software Defined Infrastructures (SDN).
 Hier staan de webserver, controller configuratie en database voor het demonstreren van de gebruikers in het PoC.
 
-## ONOS starten
-werkt op Ubuntu 16.04 en hoger. Voer prerequisites uit op:
-https://wiki.onosproject.org/display/ONOS/Requirements
-In de guide staat o.a. hoe je onos als service start (niet aan te raden, crashte toen ik het uitvoerde...)
 
-Na het uitvoeren van de requirements moet je onos in de /opt folder plaatsen. Voeg in /etc/environment JAVA_HOME ="/usr/lib/jvm/java-8-oracle". Reload de shell 
-Pas in de /opt/onos/apache-karaf-3.0.8/etc/org.apache.karaf.management.cfg de regel rmiRegistryHost aan naar de vm IP.
+INSTALL BINARIES
+box@odl:~$ sudo apt-get update
+box@odl:~$ sudo apt-get install software-properties-common
+
+INSTALL JAVA 1.8
+box@odl:~$ sudo add-apt-repository ppa:webupd8team/java
+box@odl:~$ sudo apt-get update
+box@odl:~$ sudo apt install oracle-java8-installer
+box@odl:~$ export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+
+ONOS 
+box@odl:~$ cd /opt
+box@odl:~$ sudo mkdir onos
+box@odl:~$ sudo wget -c http://downloads.onosproject.org/release/onos-1.12.0.tar.gz
+box@odl:~$ sudo tar xzf onos-$ONOS_VERSION.tar.gz
+box@odl:~$ sudo mv onos-$ONOS_VERSION onos
+
+box@odl:~$ vim /etc/environment
+Voeg toe in nieuwe regel: JAVA_HOME ="/usr/lib/jvm/java-8-oracle"
+Reload de shell 
+box@odl:~$ vim /opt/onos/apache-karaf-3.0.8/etc/org.apache.karaf.management.cfg 
+pas de regel rmiRegistryHost aan naar de vm IP.
 
 Start de service met:
 /opt/onos/bin/onos-service start
