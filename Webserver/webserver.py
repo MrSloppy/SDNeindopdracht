@@ -39,8 +39,13 @@ def CustomerInfoChecker(username, conn):
     CustomerInfoString=("select companyname, username, fsaccess, prntacces, leminutes from customerinfo where username = '{}'").format(username)
     cur.execute(CustomerInfoString)
     feedback = cur.fetchall()
-    print(feedback)
-    return feedback
+    #print(feedback)
+    #bedrijfsNaam = feedback[0][0]
+    fsaccess = feedback[0][2]
+    prntaccess = feedback[0][3]
+    leminutes = feedback[0][4]
+    userValues = {'bedrijfsNaam': feedback[0][0], 'fsaccess': feedback[0][2], 'prntaccess': feedback[0][3],'leminutes': feedback[0][4]}
+    return userValues
 
 def RestCall(APIendPoint, Method, url, data):
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
@@ -70,9 +75,6 @@ def home():
 
 @app.route('/welcome')
 def welcome():
-    conn = connectDatabaseChecker()
-    CustomerInfoChecker("Timo", conn)
-
     return render_template('welcome.html')  # render a template
 
 
@@ -92,13 +94,14 @@ def login():
         password = request.form['password']
         outletID = request.form['outletID']
 
-
+        conn = connectDatabaseChecker()
 
         try:
             if credentialChecker(password, username, conn) is True:
                 print("Succesfully logged in")
+                userValues = CustomerInfoChecker(username, conn)
                 # Hier moet de functie komen om de flows te maken
-                return redirect(url_for('welcome', username=username, conn=conn))
+                return render_template('welcome.html', username=username, userValues=userValues)
             else:
                 error = 'Invaled Credentials. Please try again.'
         except:
