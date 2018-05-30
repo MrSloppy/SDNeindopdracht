@@ -70,6 +70,9 @@ def home():
 
 @app.route('/welcome')
 def welcome():
+
+    CustomerInfoChecker("Timo", conn)
+
     return render_template('welcome.html')  # render a template
 
 
@@ -95,7 +98,7 @@ def login():
             if credentialChecker(password, username, conn) is True:
                 print("Succesfully logged in")
                 # Hier moet de functie komen om de flows te maken
-                return render_template('welcome.html', username=username, bedrijfsNaam=bedrijfsNaam)
+                return redirect(url_for('welcome', username=username, conn=conn))
             else:
                 error = 'Invaled Credentials. Please try again.'
         except:
