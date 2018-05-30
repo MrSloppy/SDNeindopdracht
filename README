@@ -7,13 +7,18 @@ werkt op Ubuntu 16.04 en hoger. Voer prerequisites uit op:
 https://wiki.onosproject.org/display/ONOS/Requirements
 In de guide staat o.a. hoe je onos als service start (niet aan te raden, crashte toen ik het uitvoerde...)
 
-Na het uitvoeren van de requirements moet je onos in de /opt folder plaatsen. Start de service met:
+Na het uitvoeren van de requirements moet je onos in de /opt folder plaatsen. Voeg in /etc/environment JAVA_HOME ="/usr/lib/jvm/java-8-oracle". Reload de shell 
+Pas in de /opt/onos/apache-karaf-3.0.8/etc/org.apache.karaf.management.cfg de regel rmiRegistryHost aan naar de vm IP.
+
+Start de service met:
 /opt/onos/bin/onos-service start
 webserver is te benaderen localhost:8181/onos/ui/index.html
-
+API documentatie staat op localhost:8181/onos/v1/docs
 Default inlog is 'onos', pw 'rocks'.
 
-## OpenFlow compatibility
+## OpenFlow compatibility met Zodiac FX
 Open de onos cli (start onos-service). Voer de volgende commando uit:
 app activate org.onosproject.openflow
-app -a -s
+test met app -a -s of deze geactiveerd is.
+Zorg dat de Zodiac firmware versie 0.84 draait en is aangesloten op port 1 (links van de stroomkabel).
+Zet de controller vm in bridge mode en in dezelfde IP range. De openflow verbinding werkt in principe meteen.
