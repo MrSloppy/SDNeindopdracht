@@ -1,0 +1,42 @@
+task = {
+
+          "deviceId": Device_id,
+          "isPermanent":"true",
+          "priority": Priority,
+          "state": "ADD",
+          "treatment": {
+                        "instructions": [
+                                         {
+                                         "type": Type,
+                                         "port": Out_port
+                                         }
+                                        ],
+                        "deferred": []
+                        },
+
+          "selector": {
+                       "criteria": [
+                                         {
+                                         "type":"IPV4_SRC",
+                                         "ip": "192.0.0.120"
+                                         },
+                                         {
+                                         "type":"IPV4_DST",
+                                         "ip": "192.0.0.140"
+                                         },{
+                                         "type":"UDP_SRC",
+                                         "udpPort": "12000"
+                                         },{
+                                         "type":"UDP_DST",
+                                         "udpPort": "14000"
+                                         },
+
+                                         {
+                                          "ethType": "0x0800",
+                                          "type": "ETH_TYPE"
+                                         }
+
+                                   ]
+                       }
+
+            }
