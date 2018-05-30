@@ -70,7 +70,7 @@ def home():
 
 @app.route('/welcome')
 def welcome():
-
+    conn = connectDatabaseChecker()
     CustomerInfoChecker("Timo", conn)
 
     return render_template('welcome.html')  # render a template
