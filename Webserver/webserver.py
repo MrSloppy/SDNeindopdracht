@@ -1,5 +1,6 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template, redirect, url_for, request
+import requests
 import psycopg2
 import json
 
@@ -47,20 +48,21 @@ def CustomerInfoChecker(username, conn):
     userValues = {'bedrijfsNaam': feedback[0][0], 'fsaccess': feedback[0][2], 'prntaccess': feedback[0][3],'leminutes': feedback[0][4]}
     return userValues
 
-def RestCall(APIendPoint, Method, url, data):
+def RestCall(Method, url, APIendPoint, data, username, password):
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
     #parameter example:
     #APIendpoint = /devices
     #url = http://<ip addr>/:8081/
     #data = post JSON data. (depends on the call you want to make, lookup swagger documentation for these values.
+    #example:   print(RestCall('GET','http://192.168.122.229:8181', '/restconf/operational/XSQL:XSQL/',None,'username','password'))
     if(Method == "GET"):
-        response = request.get(url + APIendPoint)
+        response = requests.get(url + APIendPoint, auth=(username,password))
         if(response.status_code != 200 ):
             raise ValueError("no valid API endpoint, returned an error.")
         else:
             return response
     elif(Method == "POST"):
-        response = request.post(url, data = data)
+        response = requests.post(url, data=data, auth=(username,password))
         if (response.status_code != 200):
             raise ValueError("no valid POST Request, returned an error.")
         else:
@@ -75,6 +77,7 @@ def home():
 
 @app.route('/welcome')
 def welcome():
+
     return render_template('welcome.html')  # render a template
 
 
