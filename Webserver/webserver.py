@@ -78,6 +78,7 @@ def home():
 @app.route('/welcome')
 def welcome():
 
+
     return render_template('welcome.html')  # render a template
 
 
