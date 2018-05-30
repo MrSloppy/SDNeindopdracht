@@ -5,12 +5,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body>
-    <div align="center" class="container">
+  <body background="flexwerkBackground.jpg">
+  <div class="outerDiv" style="position: relative;">
+    <div align="center" class="container" style="position: relative; top: 50%; transform: translateY(50%);">
       <h2>Welcome {{ username }}</h2>
         <h3>You can now start working in the {{ userValues['bedrijfsNaam'] }} environment.</h3>
+         <table border=1px align="center" style="width:40%; text-align: center; border-spacing: 5px;">
+              <tr>
+                <th style="text-align: center;">Fileserver toegang</th>
+                <th style="text-align: center;">Printer mogelijkheid</th>
+                <th style="text-align: center;">Resterende tijd leeromgeving</th>
+              </tr>
+              <tr>
+                <td>{{ userValues['fsaccess'] }}</td>
+                <td>{{ userValues['prntaccess'] }}</td>
+                <td>{{ userValues['leminutes'] }}</td>
+              </tr>
+            </table>
       <br>
       <p>Click <a href="http://www.google.nl">here</a> to start browsing.</p>
     </div>
+  </div>
   </body>
 </html>
