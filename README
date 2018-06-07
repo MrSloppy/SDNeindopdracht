@@ -36,5 +36,5 @@ Default inlog is 'onos', pw 'rocks'.
 Open de onos cli (start onos-service). Voer de volgende commando uit:
 app activate org.onosproject.openflow
 test met app -a -s of deze geactiveerd is.
-Zorg dat de Zodiac firmware versie 0.84 draait en is aangesloten op port 1 (links van de stroomkabel).
+Zorg dat de Zodiac firmware versie 0.84 draait en is aangesloten op port 1 (links van de stroomkabel). Restart de Zodiac na configuratie. 
 Zet de controller vm in bridge mode en in dezelfde IP range. De openflow verbinding werkt in principe meteen.
