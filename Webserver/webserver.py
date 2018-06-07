@@ -48,6 +48,31 @@ def CustomerInfoChecker(username, conn):
     userValues = {'bedrijfsNaam': feedback[0][0], 'fsaccess': feedback[0][2], 'prntaccess': feedback[0][3],'leminutes': feedback[0][4]}
     return userValues
 
+
+def DevicePortmapper(outletnumber, conn):
+    cur = conn.cursor()
+    DevicePortMapperQueryString=("select * from devicemap where 11 IN (port1,port2,port3,port4)").format(outletnumber)
+    cur.execute(DevicePortMapperQueryString)
+    colnames =[desc[0] for desc in cur.description]
+    values = cur.fetchall()
+    #we need to map this to a dict/keyval store, because we fail at doing SQL properly...
+    #also, totally unscalable thanks to not using loops. Should be fixed in the "newer" version!
+    DevicekeyValue = {colnames[0] : values[0][0], colnames[1] : values[0][1], colnames[2] : values[0][2], colnames[3] : values[0][3],colnames[4] : values[0][4]}
+
+    for key, value in DevicekeyValue.items():
+        print(key)
+        print(value)
+        print(outletnumber)
+        if value == outletnumber:
+            output=[DevicekeyValue['deviceid'],key]
+            return output
+    return ValueError
+
+
+
+
+
+
 def RestCall(Method, url, APIendPoint, data, username, password):
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
     #parameter example:
@@ -74,11 +99,12 @@ def RestCall(Method, url, APIendPoint, data, username, password):
 # use decorators to link the function to a url
 @app.route('/')
 def home():
+    conn = connectDatabaseChecker()
+    print(DevicePortmapper(11, conn))
     return "Hello, World!"  # return a string
 
 @app.route('/welcome')
 def welcome():
-
 
     return render_template('welcome.html')  # render a template
 
