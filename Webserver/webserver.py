@@ -100,7 +100,7 @@ def RestCall(Method, url, APIendPoint, data, username, password):
 @app.route('/')
 def home():
     conn = connectDatabaseChecker()
-    print(DevicePortmapper(11, conn))
+
     return "Hello, World!"  # return a string
 
 @app.route('/welcome')

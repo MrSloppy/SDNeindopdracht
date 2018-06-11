@@ -2,7 +2,7 @@
   "priority": 40000,
   "timeout": 0,
   "isPermanent": true,
-  "deviceId": "of:000070b3d56cd938",
+  "deviceId": "of:000070b3d56cd97e",
   "treatment": {
     "instructions": [
       {
@@ -36,7 +36,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
    "priority": 40000, \
    "timeout": 0, \
    "isPermanent": true, \
-   "deviceId": "of:000070b3d56cd938", \
+   "deviceId": "of:000070b3d56cd97e", \
    "treatment": { \
      "instructions": [ \
        { \
@@ -53,5 +53,5 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
        } \
      ] \
    } \
- }' 'http://192.168.145.130:8181/onos/v1/flows/of%3A000070b3d56cd938?appId=0'
+ }' 'http://192.168.122.221:8181/onos/v1/flows/of:000070b3d56cd97e?appId=0'
 

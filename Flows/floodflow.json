@@ -1,0 +1,62 @@
+
+
+
+{
+  "flows": [
+{
+  "priority": 40000,
+  "timeout": 0,
+  "isPermanent": true,
+  "deviceId": "of:000070b3d56cd97e",
+  "treatment": {
+    "instructions": [
+      {
+        "type": "OUTPUT",
+        "port": "CONTROLLER"
+      }
+    ]
+  },
+  "selector": {
+    "criteria": [
+      {
+        "type": "IPV4_DST",
+        "ip": "10.10.10.254/32"
+      }
+    ]
+  }
+
+}
+    ]
+  }
+
+
+
+
+
+
+{
+  "flows": [
+    {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd97e",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IN_PORT",
+            "port": "1"
+          }
+        ]
+      }
+    }
+]
+}
