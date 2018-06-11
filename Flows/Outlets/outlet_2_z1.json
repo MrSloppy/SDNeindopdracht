@@ -1,0 +1,217 @@
+If outlet = 2 (Z1:2) dan
+
+Op Z1 (client ding):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 3
+IPV4_SRC = 10.10.10.100 OUTPUT port 2
+
+Op Z2 (in dit geval transit):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 2
+IPV4_SRC = 10.10.10.100 OUTPUT port 3
+
+Op Z3 (in dit geval transit):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 3
+IPV4_SRC = 10.10.10.100 OUTPUT port 2
+
+Op Z4 (server kant):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 2
+IPV4_SRC= 10.10.10.100 OUTPUT port 3
+
+
+
+{
+  "flows": [
+    {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd948",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "3"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_DST",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+
+     {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd948",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_SRC",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+
+
+
+
+
+
+          {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd938",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_DST",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+          {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd938",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "3"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_SRC",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+
+
+                {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd97e",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "3"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_DST",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+          {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd97e",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_SRC",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+
+
+
+               {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd98f",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "2"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_DST",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    },
+               {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd98f",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "3"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IPV4_SRC",
+            "ip": "10.10.10.100/32"
+          }
+        ]
+      }
+    }
+
+]
+}
