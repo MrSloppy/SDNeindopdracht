@@ -10,7 +10,7 @@
         "instructions": [
           {
             "type": "OUTPUT",
-            "port": "2"
+            "port": "FLOOD"
           }
         ]
       },

@@ -1,12 +1,11 @@
 
-
 {
   "flows": [
     {
-      "priority": 40000,
+      "priority": 30000,
       "timeout": 0,
       "isPermanent": true,
-      "deviceId": "of:000070b3d56cd97e",
+      "deviceId": "of:000070b3d56cd938",
       "treatment": {
         "instructions": [
           {
@@ -18,18 +17,18 @@
       "selector": {
         "criteria": [
           {
-            "type": "IPV4_DST",
-            "ip": "10.10.10.100/32"
+            "type": "IN_PORT",
+            "port": "1"
           }
         ]
       }
     },
 
      {
-      "priority": 40000,
+      "priority": 30000,
       "timeout": 0,
       "isPermanent": true,
-      "deviceId": "of:000070b3d56cd97e",
+      "deviceId": "of:000070b3d56cd938",
       "treatment": {
         "instructions": [
           {
@@ -41,11 +40,63 @@
       "selector": {
         "criteria": [
           {
-            "type": "IPV4_DST",
-            "ip": "10.10.10.101/32"
+            "type": "IN_PORT",
+            "port": "3"
+          }
+        ]
+      }
+    },
+
+    {
+      "priority": 30000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd96a",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "1"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IN_PORT",
+            "port": "3"
+          }
+        ]
+      }
+    },
+
+     {
+      "priority": 30000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd96a",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "3"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IN_PORT",
+            "port": "1"
           }
         ]
       }
     }
+    
+
 ]
 }
+
+
+
+
