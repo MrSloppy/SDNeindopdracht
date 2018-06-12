@@ -1,0 +1,26 @@
+{
+"flows": [
+      {
+        "priority": 30000,
+        "timeout": 30,
+        "isPermanent": false,
+        "deviceId": "of:000070b3d56cd938",
+        "treatment": {
+          "instructions": [
+            {
+              "type": "OUTPUT",
+              "port": "4"
+            }
+          ]
+        },
+        "selector": {
+          "criteria": [
+            {
+              "type": "IN_PORT",
+              "port": "1"
+            }
+          ]
+        }
+      }
+]
+}

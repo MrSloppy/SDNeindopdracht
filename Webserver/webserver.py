@@ -69,7 +69,7 @@ def DevicePortmapper(outletnumber, conn):
     return ValueError
 
 def flowDataMaker():
-    with open("Webserver/testflow.json", 'r')as jsonfile:
+    with open("testflow.json", 'r')as jsonfile:
         data = json.load(jsonfile)
         print(data)
     return data
@@ -110,12 +110,12 @@ def RestCall():
     #    else:
     #        return response
     #elif(Method == "POST"):
-    url = 'http://10.0.1.130:8181/onos/v1/flows/'
+    url = 'http://10.0.1.130:8181/onos/v1/flows?appId=20'
     print(url)
     data = flowDataMaker()
     print(data)
-    headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    response = requests.post(url, data=data, auth=("onos", "rocks"), headers=headers)
+    headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    response = requests.post(url, data=json.dumps(data), auth=("onos", "rocks"), headers=headers)
         #if (response.status_code != 200):
             #raise ValueError("no valid POST Request, returned an error.")
         #else:
