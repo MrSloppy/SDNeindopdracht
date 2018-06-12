@@ -68,30 +68,55 @@ def DevicePortmapper(outletnumber, conn):
             return output
     return ValueError
 
+def flowDataMaker(outletID):
+    if(outletID == 1):
+        # Read JSON data into the datastore variable
+        with open("Flows/Outlets/outlet_1_z1.json", 'r') as f:
+            datastore = json.load(f)
+            print(datastore)
+    if(outletID == 2):
+        # Read JSON data into the datastore variable
+        with open("Flows/Outlets/outlet_2_z1.json", 'r') as f:
+            datastore = json.load(f)
+            print(datastore)
+    if(outletID == 3):
+        # Read JSON data into the datastore variable
+        with open("Flows/Outlets/outlet_3_z2.json", 'r') as f:
+            datastore = json.load(f)
+            print(datastore)
+    else:
+        print("Het lukt niet")
+    return(datastore)
 
 
 
 
 
-def RestCall(Method, url, APIendPoint, data, username, password):
+def RestCall(outletID):
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
     #parameter example:
     #APIendpoint = /devices
     #url = http://<ip addr>/:8081/
     #data = post JSON data. (depends on the call you want to make, lookup swagger documentation for these values.
     #example:   print(RestCall('GET','http://192.168.122.229:8181', '/restconf/operational/XSQL:XSQL/',None,'username','password'))
-    if(Method == "GET"):
-        response = requests.get(url + APIendPoint, auth=(username,password))
-        if(response.status_code != 200 ):
-            raise ValueError("no valid API endpoint, returned an error.")
-        else:
-            return response
-    elif(Method == "POST"):
-        response = requests.post(url, data=data, auth=(username,password))
-        if (response.status_code != 200):
-            raise ValueError("no valid POST Request, returned an error.")
-        else:
-            return response
+    #if(Method == "GET"):
+    #    response = requests.get(url + APIendPoint, auth=(username,password))
+    ###    if(response.status_code != 200 ):
+    #        raise ValueError("no valid API endpoint, returned an error.")
+    #    else:
+    #        return response
+    #elif(Method == "POST"):
+    url = 'http://10.0.1.130:8181/onos/v1/flows/'
+    data = flowDataMaker(outletID)
+    print(data)
+    headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+    response = requests.post(url, data=data, auth=("onos","rocks"), headers=headers)
+        #if (response.status_code != 200):
+            #raise ValueError("no valid POST Request, returned an error.")
+        #else:
+    print(response)
+    return response
+
 
 
 
@@ -119,11 +144,12 @@ def login():
         print("username = "+request.form['username'])
         print("password = "+request.form['password'])
         print("outletID = "+request.form['outletID'])
-
+        print(request.headers.get('X-Forwarded-For', request.remote_addr))
         bedrijfsNaam = request.form['companyName']
         username = request.form['username']
         password = request.form['password']
         outletID = request.form['outletID']
+        clientIP = request.headers.get('X-Forwarded-For', request.remote_addr)
 
         conn = connectDatabaseChecker()
 
@@ -131,7 +157,9 @@ def login():
             if credentialChecker(password, username, conn) is True:
                 print("Succesfully logged in")
                 userValues = CustomerInfoChecker(username, conn)
-                # Hier moet de functie komen om de flows te maken
+                RestCall(outletID)
+                print(userValues)
+
                 return render_template('welcome.html', username=username, userValues=userValues)
             else:
                 error = 'Invaled Credentials. Please try again.'
