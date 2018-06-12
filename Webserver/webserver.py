@@ -73,8 +73,9 @@ def flowDataMaker(fsport):
     with open("testflowClientA.json", 'r')as jsonfile:
         data = json.load(jsonfile)
         print(data)
-
-
+    data["flows"][2]["treatment"]["instructions"][0]["port"] = fsport
+    data["flows"][3]["selector"]["criteria"][0]["port"] = fsport
+    print(data)
     return data
     # if(outletID == 1):
     #     # Read JSON data into the datastore variable
