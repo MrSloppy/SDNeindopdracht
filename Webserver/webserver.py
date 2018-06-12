@@ -114,7 +114,7 @@ def RestCall(fsport):
     #    else:
     #        return response
     #elif(Method == "POST"):
-    url = 'http://10.0.1.130:8181/onos/v1/flows?appId=20'
+    url = 'http://10.0.1.130:8181/onos/v1/flows?appId={}'.format(fsport)
     print(url)
     data = flowDataMaker(fsport)
     print(data)
