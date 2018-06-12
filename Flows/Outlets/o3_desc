@@ -1,0 +1,15 @@
+
+If outlet = 3 (Z2:1) dan
+	Op Z2 (client ding):
+		If IPV4_DST = 10.10.10.100 OUTPUT port 2
+		If IPV4_SRC = 10.10.10.100 OUTPUT port 1
+	Op Z3 (TRANSIT DING):
+		If dst = 10.10.10.100 OUTPUT port 3
+		If src = 10.10.10.100 OUTPUT port 2
+	Op Z4 (server kant):
+		IPV4_DST = 10.10.10.100 OUTPUT port 2
+		If SRC =10.10.10.100 OUTPUT port 3
+
+
+
+

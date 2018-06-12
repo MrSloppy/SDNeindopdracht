@@ -1,0 +1,23 @@
+If outlet = 2 (Z1:2) dan
+
+Op Z1 (client ding):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 3
+IPV4_SRC = 10.10.10.100 OUTPUT port 2
+
+Op Z2 (in dit geval transit):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 2
+IPV4_SRC = 10.10.10.100 OUTPUT port 3
+
+Op Z3 (in dit geval transit):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 3
+IPV4_SRC = 10.10.10.100 OUTPUT port 2
+
+Op Z4 (server kant):
+
+IPV4_DST = 10.10.10.100 OUTPUT port 2
+IPV4_SRC= 10.10.10.100 OUTPUT port 3
+
+
