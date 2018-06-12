@@ -91,8 +91,53 @@
           }
         ]
       }
-    }
+    },
     
+    {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd96a",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "FLOOD"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IN_PORT",
+            "port": "1"
+          }
+        ]
+      }
+    },
+
+     {
+      "priority": 40000,
+      "timeout": 0,
+      "isPermanent": true,
+      "deviceId": "of:000070b3d56cd96a",
+      "treatment": {
+        "instructions": [
+          {
+            "type": "OUTPUT",
+            "port": "1"
+          }
+        ]
+      },
+      "selector": {
+        "criteria": [
+          {
+            "type": "IN_PORT",
+            "port": "2"
+          }
+        ]
+      }
+    }
 
 ]
 }
