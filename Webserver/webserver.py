@@ -68,31 +68,35 @@ def DevicePortmapper(outletnumber, conn):
             return output
     return ValueError
 
-def flowDataMaker(outletID):
-    if(outletID == 1):
-        # Read JSON data into the datastore variable
-        with open("Flows/Outlets/outlet_1_z1.json", 'r') as f:
-            datastore = json.load(f)
-            print(datastore)
-    if(outletID == 2):
-        # Read JSON data into the datastore variable
-        with open("Flows/Outlets/outlet_2_z1.json", 'r') as f:
-            datastore = json.load(f)
-            print(datastore)
-    if(outletID == 3):
-        # Read JSON data into the datastore variable
-        with open("Flows/Outlets/outlet_3_z2.json", 'r') as f:
-            datastore = json.load(f)
-            print(datastore)
-    else:
-        print("Het lukt niet")
-    return(datastore)
+def flowDataMaker():
+    with open("Webserver/testflow.json", 'r')as jsonfile:
+        data = json.load(jsonfile)
+        print(data)
+    return data
+    # if(outletID == 1):
+    #     # Read JSON data into the datastore variable
+    #     with open("Flows/Outlets/outlet_1_z1.json", 'r') as f:
+    #         datastore = json.load(f)
+    #         print(datastore)
+    # if(outletID == 2):
+    #     # Read JSON data into the datastore variable
+    #     with open("Flows/Outlets/outlet_2_z1.json", 'r') as f:
+    #         datastore = json.load(f)
+    #         print(datastore)
+    # if(outletID == 3):
+    #     # Read JSON data into the datastore variable
+    #     with open("Flows/Outlets/outlet_3_z2.json", 'r') as f:
+    #         datastore = json.load(f)
+    #         print(datastore)
+    # else:
+    #     print("Het lukt niet")
+    # return(datastore)
 
 
 
 
 
-def RestCall(outletID):
+def RestCall():
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
     #parameter example:
     #APIendpoint = /devices
@@ -107,10 +111,11 @@ def RestCall(outletID):
     #        return response
     #elif(Method == "POST"):
     url = 'http://10.0.1.130:8181/onos/v1/flows/'
-    data = flowDataMaker(outletID)
+    print(url)
+    data = flowDataMaker()
     print(data)
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    response = requests.post(url, data=data, auth=("onos","rocks"), headers=headers)
+    response = requests.post(url, data=data, auth=("onos", "rocks"), headers=headers)
         #if (response.status_code != 200):
             #raise ValueError("no valid POST Request, returned an error.")
         #else:
@@ -157,12 +162,11 @@ def login():
             if credentialChecker(password, username, conn) is True:
                 print("Succesfully logged in")
                 userValues = CustomerInfoChecker(username, conn)
-                RestCall(outletID)
                 print(userValues)
-
+                RestCall()
                 return render_template('welcome.html', username=username, userValues=userValues)
             else:
-                error = 'Invaled Credentials. Please try again.'
+                error = 'Invalid Credentials. Please try again.'
         except:
                 error = 'Invalid Credentials. Please try again.'
 
