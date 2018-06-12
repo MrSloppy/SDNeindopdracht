@@ -23,7 +23,7 @@ Op Z4 (server kant):
       "priority": 40000,
       "timeout": 0,
       "isPermanent": true,
-      "deviceId": "of:000070b3d56cd948",
+      "deviceId": "of:000070b3d56cd96a",
       "treatment": {
         "instructions": [
           {
