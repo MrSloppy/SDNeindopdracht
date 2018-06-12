@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, url_for, request
 import requests
 import psycopg2
 import json
+from jinja2 import Template
 
 # create the application object
 app = Flask(__name__)
@@ -37,7 +38,7 @@ def credentialChecker(password, username, conn):
 
 def CustomerInfoChecker(username, conn):
     cur = conn.cursor()
-    CustomerInfoString=("select companyname, username, fsaccess, prntacces, leminutes from customerinfo where username = '{}'").format(username)
+    CustomerInfoString=("select companyname, username, fsaccess, prntacces, leminutes, fsport from customerinfo where username = '{}'").format(username)
     cur.execute(CustomerInfoString)
     feedback = cur.fetchall()
     #print(feedback)
@@ -45,7 +46,7 @@ def CustomerInfoChecker(username, conn):
     fsaccess = feedback[0][2]
     prntaccess = feedback[0][3]
     leminutes = feedback[0][4]
-    userValues = {'bedrijfsNaam': feedback[0][0], 'fsaccess': feedback[0][2], 'prntaccess': feedback[0][3],'leminutes': feedback[0][4]}
+    userValues = {'bedrijfsNaam': feedback[0][0], 'fsaccess': feedback[0][2], 'prntaccess': feedback[0][3],'leminutes': feedback[0][4], 'fsport': feedback[0][5]}
     return userValues
 
 
@@ -68,10 +69,12 @@ def DevicePortmapper(outletnumber, conn):
             return output
     return ValueError
 
-def flowDataMaker():
-    with open("testflow.json", 'r')as jsonfile:
+def flowDataMaker(fsport):
+    with open("testflowClientA.json", 'r')as jsonfile:
         data = json.load(jsonfile)
         print(data)
+
+
     return data
     # if(outletID == 1):
     #     # Read JSON data into the datastore variable
@@ -96,7 +99,7 @@ def flowDataMaker():
 
 
 
-def RestCall():
+def RestCall(fsport):
     #used to construct restcall. (ApiEndpoint is the api endpoint in ONOS, the method is either GET or REST, and the url is the base URL for API calls.
     #parameter example:
     #APIendpoint = /devices
@@ -112,7 +115,7 @@ def RestCall():
     #elif(Method == "POST"):
     url = 'http://10.0.1.130:8181/onos/v1/flows?appId=20'
     print(url)
-    data = flowDataMaker()
+    data = flowDataMaker(fsport)
     print(data)
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
     response = requests.post(url, data=json.dumps(data), auth=("onos", "rocks"), headers=headers)
@@ -163,7 +166,9 @@ def login():
                 print("Succesfully logged in")
                 userValues = CustomerInfoChecker(username, conn)
                 print(userValues)
-                RestCall()
+                fsport = userValues["fsport"]
+                print(fsport)
+                RestCall(fsport)
                 return render_template('welcome.html', username=username, userValues=userValues)
             else:
                 error = 'Invalid Credentials. Please try again.'
